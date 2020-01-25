@@ -8,5 +8,6 @@ namespace GenericForm
 {
     public class Class1
     {
+
     }
 }
