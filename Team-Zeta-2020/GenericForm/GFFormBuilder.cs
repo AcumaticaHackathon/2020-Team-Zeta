@@ -19,18 +19,21 @@ namespace GF
             OrderBy<Asc<CSUserDefDataDetail.sequenceNo>>> Details;
         public delegate void PersistDelegate();
         [PXOverride]
-        public void Persist(Action baseMethod)
+        public void _(Events.RowPersisting<CSUserDefDataHeader> e)
         {
             var siteMapGraph = PXGraph.CreateInstance<SiteMapMaint>();
-            foreach(CSUserDefDataDetail detail in Details.Select())
+            var header = Header.Current;
+            foreach (CSUserDefDataDetail detail in Details.Select())
             {
                 var siteMapRow = new SiteMap()
                 {
                     ScreenID = detail.DataElementName,
-                    Url = $"~/Pages/CS/{detail.DataElementName}.aspx"
+                    Url = $"~/Pages/CS/{detail.DataElementName}.aspx",
+                    Title = header.Description
                 };
                 siteMapGraph.SiteMap.Insert(siteMapRow);
             }
+            siteMapGraph.Actions.PressSave();
         }
 
         public PXAction<CSUserDefDataHeader> moveRow;

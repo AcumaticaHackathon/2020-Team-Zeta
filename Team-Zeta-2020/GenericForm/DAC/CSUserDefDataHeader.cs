@@ -26,7 +26,7 @@ namespace GF.DAC
 
     #region Description
     [PXDBString(80, IsUnicode = true, InputMask = "")]
-    [PXUIField(DisplayName = "Description")]
+    [PXUIField(DisplayName = "Title")]
     public virtual string Description { get; set; }
     public abstract class description : PX.Data.BQL.BqlString.Field<description> { }
     #endregion
