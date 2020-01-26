@@ -53,8 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataTypesAttribute.cs" />
-    <Compile Include="ControlTypesAttribute.cs" />
+    <Compile Include="Attributes\DataTypesAttribute.cs" />
+    <Compile Include="Attributes\ControlTypesAttribute.cs" />
     <Compile Include="DAC\CSUserDefDataDetail.cs" />
     <Compile Include="DAC\CSUserDefDataHeader.cs" />
     <Compile Include="GFFormBuilder.cs" />
