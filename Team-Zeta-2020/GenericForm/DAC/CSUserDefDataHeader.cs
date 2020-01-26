@@ -8,15 +8,15 @@ namespace GF.DAC
   public class CSUserDefDataHeader : IBqlTable
   {
       #region UserDefDataID
+      [PXSelector(typeof(Search<userDefDataID>),
+          typeof(userDefDataCD),
+          typeof(description), SubstituteKey = typeof(userDefDataCD))]
     [PXDBIdentity(IsKey = true)]
     public virtual int? UserDefDataID { get; set; }
     public abstract class userDefDataID : PX.Data.BQL.BqlInt.Field<userDefDataID> { }
     #endregion
 
     #region UserDefDataCD
-    [PXSelector(typeof(Search<userDefDataCD>),
-        typeof(userDefDataCD),
-        typeof(description))]
     [PXDBString(30, IsUnicode = true, InputMask = "")]
     [PXUIField(DisplayName = "Screen ID")]
     public virtual string UserDefDataCD { get; set; }
