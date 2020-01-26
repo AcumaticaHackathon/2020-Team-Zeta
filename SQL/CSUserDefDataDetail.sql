@@ -1,4 +1,5 @@
 ﻿/****** Object:  Table [dbo].[CSUserDefDataDetail]    Script Date: 01/25/2020 02:52:30 ******/
+Drop table CSUserDefDataDetail
 SET ANSI_NULLS ON
 GO
 ​
@@ -10,8 +11,8 @@ CREATE TABLE [dbo].[CSUserDefDataDetail](
 	[UserDefDataID]          [int]              NOT NULL,
 	[UserDefDataLineID]      [int]              NOT NULL ,
 	[DataElementName]        [nvarchar](30)     NOT NULL,
-	[DataElementType]        [nvarchar](20)     NOT NULL, 
-	[ControlType]            [nvarchar] (20)    NOT NULL,
+	[DataElementType]        [nvarchar] (20)		NOT NULL, 
+	[ControlType]            int	                NOT NULL,
 	[SequenceNo]             [int]              NOT NULL,
 	[tstamp]                 [timestamp]        NOT NULL,
 	[CreatedByID]            [uniqueidentifier] NOT NULL,
