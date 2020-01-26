@@ -9,7 +9,6 @@ namespace GenericFormTZ
   {
     #region UserDefDataID
     [PXDBInt(IsKey = true)]
-    [PXUIField(DisplayName = "User Def Data ID")]
     public virtual int? UserDefDataID { get; set; }
     public abstract class userDefDataID : PX.Data.BQL.BqlInt.Field<userDefDataID> { }
     #endregion
@@ -50,7 +49,6 @@ namespace GenericFormTZ
 
     #region Tstamp
     [PXDBTimestamp()]
-    [PXUIField(DisplayName = "Tstamp")]
     public virtual byte[] Tstamp { get; set; }
     public abstract class tstamp : PX.Data.BQL.BqlByteArray.Field<tstamp> { }
     #endregion

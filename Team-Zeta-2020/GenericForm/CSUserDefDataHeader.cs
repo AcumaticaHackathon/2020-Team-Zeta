@@ -15,7 +15,7 @@ namespace GenericFormTZ
 
     #region UserDefDataCD
     [PXDBString(30, IsUnicode = true, InputMask = "")]
-    [PXUIField(DisplayName = "User Def Data CD")]
+    [PXUIField(DisplayName = "Screen ID")]
     public virtual string UserDefDataCD { get; set; }
     public abstract class userDefDataCD : PX.Data.BQL.BqlString.Field<userDefDataCD> { }
     #endregion
@@ -29,7 +29,6 @@ namespace GenericFormTZ
 
     #region Tstamp
     [PXDBTimestamp()]
-    [PXUIField(DisplayName = "Tstamp")]
     public virtual byte[] Tstamp { get; set; }
     public abstract class tstamp : PX.Data.BQL.BqlByteArray.Field<tstamp> { }
     #endregion
