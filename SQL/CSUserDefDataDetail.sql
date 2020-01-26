@@ -8,7 +8,7 @@ GO
 CREATE TABLE [dbo].[CSUserDefDataDetail](
 	[CompanyID]              [int]              NOT NULL,
 	[UserDefDataID]          [int]              NOT NULL,
-	[UserDefDataLineID]      [int]              NOT NULL IDENTITY,
+	[UserDefDataLineID]      [int]              NOT NULL ,
 	[DataElementName]        [nvarchar](30)     NOT NULL,
 	[DataElementType]        [nvarchar](20)     NOT NULL, 
 	[ControlType]            [nvarchar] (20)    NOT NULL,

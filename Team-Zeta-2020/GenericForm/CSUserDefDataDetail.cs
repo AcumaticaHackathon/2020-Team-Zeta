@@ -9,12 +9,16 @@ namespace GenericFormTZ
   {
     #region UserDefDataID
     [PXDBInt(IsKey = true)]
+    [PXDBDefault(typeof(CSUserDefDataHeader.userDefDataID))]
+    [PXParent(typeof(Select<CSUserDefDataHeader, 
+        Where<CSUserDefDataHeader.userDefDataID.IsEqual<userDefDataID>>>))]
     public virtual int? UserDefDataID { get; set; }
     public abstract class userDefDataID : PX.Data.BQL.BqlInt.Field<userDefDataID> { }
     #endregion
 
     #region UserDefDataLineID
-    [PXDBIdentity(IsKey = true)]
+    [PXDBInt(IsKey = true)]
+    [PXLineNbr(typeof(CSUserDefDataHeader.prevLineNbr))]
     public virtual int? UserDefDataLineID { get; set; }
     public abstract class userDefDataLineID : PX.Data.BQL.BqlInt.Field<userDefDataLineID> { }
     #endregion

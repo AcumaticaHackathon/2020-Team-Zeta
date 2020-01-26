@@ -27,6 +27,13 @@ namespace GenericFormTZ
     public abstract class description : PX.Data.BQL.BqlString.Field<description> { }
     #endregion
 
+    #region PrevLineNbr
+    [PXDBInt()]
+    [PXDefault(0, PersistingCheck = PXPersistingCheck.Nothing)]
+    public virtual int? PrevLineNbr { get; set; }
+    public abstract class prevLineNbr : PX.Data.BQL.BqlInt.Field<prevLineNbr> { }
+    #endregion
+
     #region Tstamp
     [PXDBTimestamp()]
     public virtual byte[] Tstamp { get; set; }
