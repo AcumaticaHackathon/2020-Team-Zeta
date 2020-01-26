@@ -50,6 +50,7 @@ namespace GF.DAC
     
           #region SequenceNo
     [PXDBInt()]
+    [PXDefault(0)]
     [PXUIField(DisplayName = "Sequence No")]
     public virtual int? SequenceNo { get; set; }
     public abstract class sequenceNo : PX.Data.BQL.BqlInt.Field<sequenceNo> { }

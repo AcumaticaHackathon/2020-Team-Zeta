@@ -32,5 +32,10 @@ namespace GF
             }
         }
 
+
+        protected virtual void _(Events.RowInserted<CSUserDefDataDetail> e)
+        {
+            e.Row.SequenceNo = Details.Select().FirstTableItems.Count() - 1;
+        }
     }
 }
