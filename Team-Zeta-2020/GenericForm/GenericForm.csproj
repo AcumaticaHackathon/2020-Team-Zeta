@@ -56,6 +56,7 @@
     <Compile Include="ControlTypesAttribute.cs" />
     <Compile Include="CSUserDefDataDetail.cs" />
     <Compile Include="CSUserDefDataHeader.cs" />
+    <Compile Include="GFFormBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,43 @@
+﻿<Page path="~/Pages/GF/GF101000.aspx" pageSource="jVPRbtowFH1upf6D5amvBDbtpQrV2lCgUpkQYe3eptvkFqw6dmY7UPqwb5+vEyCsZWpesM+9HJ9zrh2ff2NTWCC7A7Wo/KLPk0+cTcA6NFQYCumxP9EesdFQm2KADoTsFAHm7Kpy+maFyj0Ig1XZ585UyNk9SJGDwxn+rtC6Pn8CaT2e6LxhHg173V632+2ALV86meXsVi3RCGf7nE77tW3gbC4c/eOHcrTIg27Ozi/PTmPvohY435TI7oVxFcgpuOUHpBOBp/DnXyRaOe+B3Q76PPPrHikN0FRChmMtczRULJeDlLNZpcB7StGsPJGnOYnLl4vpzwE4SHVlMgxMuTdl6lZbt3qFVjySmXmI6UHkJNXbPOdnp6z5yMt3KCgkVD6SjMR3RkP6ua4EaWl1T40owGzuBa77fIxwWCVxJ3ECUj5C9pzoogCV2+Dc49E7BY/+Y4aCjloxXR5J7fPx1IbHQyNXJD7QPPnNm9D2SrapEjLB4hHNzvJBlmyMYrF0YVe++FsqpV7TVR2LHLeXsY5mjkUp/U0Nu0bSHWx05WaVrOfYBnpv1KUOjJvpdTPTqKaN2rxNolunH83zy/E8R8fzHBmRB4qFX3wgy/dz+xpyS5+For765dj/BnmHK5S2HSMpCejBvLZcdSfd0TjRsiqU3SP07cvRQb0Jc0fe5N06PiaBqXjFEB8IRcc+CJXrNWc3CvwDzLcvcCJUyzNnzfiuMie0ugbTPKBoB7TmSRLezPIv">
+    <PXFormView ID="form" ParentId="phF_form" TypeFullName="PX.Web.UI.PXFormView">
+        <Children Key="Template">
+            <AddItem>
+                <PXLayoutRule TypeFullName="PX.Web.UI.PXLayoutRule">
+                    <Prop Key="Virtual:ApplyStylesheetSkin" />
+                    <Prop Key="ID" Value="PXLayoutRule1" />
+                    <Prop Key="StartRow" Value="True" />
+                    <Children Key="Controls" />
+                </PXLayoutRule>
+            </AddItem>
+        </Children>
+    </PXFormView>
+    <PXDataSource ID="ds" ParentId="phDS_ds" TypeFullName="PX.Web.UI.PXDataSource">
+        <Prop Key="TypeName" Value="GenericForm.GFFormBuilder" />
+    </PXDataSource>
+    <Content ID="cont3" ParentId="phG" TypeFullName="System.Web.UI.WebControls.Content">
+        <Children Key="Controls">
+            <AddItem>
+                <PXGrid TypeFullName="PX.Web.UI.PXGrid">
+                    <Prop Key="Virtual:ApplyStylesheetSkin" />
+                    <Prop Key="ID" Value="grid" />
+                    <Prop Key="Height" Value="150px" />
+                    <Prop Key="SkinID" Value="Details" />
+                    <Prop Key="Width" Value="100%" />
+                    <Prop Key="AllowAutoHide" Value="false" />
+                    <Prop Key="AutoSize.Enabled" Value="True" />
+                    <Prop Key="AutoSize.Container" Value="Window" />
+                    <Prop Key="AutoSize.MinHeight" Value="150" />
+                    <Prop Key="DataSourceID" Value="ds" />
+                    <Children Key="Levels">
+                        <AddItem>
+                            <PXGridLevel TypeFullName="PX.Web.UI.PXGridLevel">
+                                <Prop Key="DataMember" Value="Details" />
+                                <Children Key="Columns" />
+                            </PXGridLevel>
+                        </AddItem>
+                    </Children>
+                </PXGrid>
+            </AddItem>
+        </Children>
+    </Content>
+</Page>

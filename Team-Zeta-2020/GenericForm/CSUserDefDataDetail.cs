@@ -8,12 +8,7 @@ namespace GenericFormTZ
     [PXCacheName("CSUserDefDataDetail")]
     public class CSUserDefDataDetail : IBqlTable
     {
-        public const int Text = 1;
-        public const int Combo = 2;
-        public const int CheckBox = 4;
-        public const int Datetime = 5;
-        public const int MultiSelectCombo = 6;
-        public const int GISelector = 7;
+
           #region UserDefDataID
     [PXDBInt(IsKey = true)]
     [PXDBDefault(typeof(CSUserDefDataHeader.userDefDataID))]
