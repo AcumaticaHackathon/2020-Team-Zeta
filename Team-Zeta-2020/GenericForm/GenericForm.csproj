@@ -53,7 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControlTypesAttribute - Copy.cs" />
+    <Compile Include="DataTypesAttribute.cs" />
     <Compile Include="ControlTypesAttribute.cs" />
     <Compile Include="CSUserDefDataDetail.cs" />
     <Compile Include="CSUserDefDataHeader.cs" />

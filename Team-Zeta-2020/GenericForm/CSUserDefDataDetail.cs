@@ -33,9 +33,9 @@ namespace GenericFormTZ
             #endregion
     
           #region DataElementType
-        
-          [PXDBString(20, IsUnicode = true)]
+          [PXDBString(2, IsUnicode = true)]
           [PXUIField(DisplayName = "Data Element Type")]
+          [DataTypes]
           public virtual string DataElementType { get; set; }
           public abstract class dataElementType : PX.Data.BQL.BqlString.Field<dataElementType> { }
           #endregion
