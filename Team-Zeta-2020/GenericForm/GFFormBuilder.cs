@@ -15,6 +15,9 @@ namespace GF
         public PXSelect<CSUserDefDataDetail,
             Where<CSUserDefDataDetail.userDefDataID, Equal<Current<CSUserDefDataHeader.userDefDataID>>>> Details;
 
-
+        protected virtual void _(Events.RowInserted<CSUserDefDataDetail> e)
+        {
+            e.Row.SequenceNo = Details.Select().FirstTableItems.Count() - 1;
+        }
     }
 }
