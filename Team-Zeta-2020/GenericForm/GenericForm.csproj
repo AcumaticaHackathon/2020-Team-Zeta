@@ -43,6 +43,9 @@
     <Reference Include="PX.Objects">
       <HintPath>..\..\..\..\Program Files\Acumatica ERP\Hackathon\Bin\PX.Objects.dll</HintPath>
     </Reference>
+    <Reference Include="PX.SiteMap">
+      <HintPath>..\..\..\..\Program Files\Acumatica ERP\Hackathon\Bin\PX.SiteMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

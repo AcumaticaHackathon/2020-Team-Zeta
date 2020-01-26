@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using GF.DAC;
 using PX.Data;
-using PX.SiteMap.DAC;
 using PX.SiteMap.Graph;
+using PX.SiteMap.DAC;
+using PX.Web.UI;
 
 namespace GF
 {
@@ -36,11 +37,11 @@ namespace GF
             siteMapGraph.Actions.PressSave();
         }
 
-        public PXAction<CSUserDefDataHeader> moveRow;
-        [PXButton]
+        public PXAction<CSUserDefDataHeader> moveUp;
+        [PXButton(CommitChanges = true)]
         [PXUIField(DisplayName = "Move Up")]
 
-        protected virtual void MoveRow()
+        protected virtual void MoveUp()
         {
             var row = Details.Current as CSUserDefDataDetail;
             var rowPrev = Details.Select().RowCast<CSUserDefDataDetail>().FirstOrDefault(x => x.SequenceNo == (row.SequenceNo - 1));
@@ -54,7 +55,7 @@ namespace GF
         }
 
         public PXAction<CSUserDefDataHeader> moveDown;
-        [PXButton]
+        [PXButton(CommitChanges = true)]
         [PXUIField(DisplayName = "Move Down")]
 
         protected virtual void MoveDown()
@@ -68,6 +69,16 @@ namespace GF
             Details.Update(rowNext);
             Details.Update(row);
             Actions.PressSave();
+        }
+
+        public PXAction<CSUserDefDataHeader> openScreen;
+        [PXButton()]
+        [PXUIField(DisplayName = "Open Screen")]
+        protected virtual void OpenScreen()
+        {
+            var row = Header.Current as CSUserDefDataHeader;
+            if (row is null || string.IsNullOrEmpty(row.SiteMapID)) return;
+            throw new PXRedirectByScreenIDException(row.SiteMapID, PXBaseRedirectException.WindowMode.NewWindow);
         }
 
         protected virtual void _(Events.RowInserted<CSUserDefDataDetail> e)
