@@ -18,8 +18,7 @@ namespace GF
         public PXSelect<CSUserDefDataDetail,
             Where<CSUserDefDataDetail.userDefDataID, Equal<Current<CSUserDefDataHeader.userDefDataID>>>, 
             OrderBy<Asc<CSUserDefDataDetail.sequenceNo>>> Details;
-        public delegate void PersistDelegate();
-        [PXOverride]
+
         public void _(Events.RowPersisting<CSUserDefDataHeader> e)
         {
             var siteMapGraph = PXGraph.CreateInstance<SiteMapMaint>();
