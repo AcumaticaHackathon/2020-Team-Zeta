@@ -6,7 +6,8 @@
         TypeName="GF.GFFormBuilder"
         PrimaryView="Header">
 		<CallbackCommands>
-
+            <px:PXDSCallbackCommand CommitChanges="True" Name="moveDown" Visible="False" />
+            <px:PXDSCallbackCommand CommitChanges="True" Name="moveUp" Visible="False" />
 		</CallbackCommands>
 	</px:PXDataSource>
 </asp:Content>
@@ -33,6 +34,18 @@
 		</Levels>
 		<AutoSize Container="Window" Enabled="True" MinHeight="150" />
 		<ActionBar >
+			<CustomItems>
+                <px:PXToolBarButton CommandName="moveUp" CommandSourceID="ds" DependOnGrid="grid">
+                    <AutoCallBack>
+                        <Behavior CommitChanges="True" PostData="Page" />
+                    </AutoCallBack>
+                </px:PXToolBarButton>
+                <px:PXToolBarButton CommandName="moveDown" CommandSourceID="ds" DependOnGrid="grid">
+                    <AutoCallBack>
+                        <Behavior CommitChanges="True" PostData="Page" />
+                    </AutoCallBack>
+                </px:PXToolBarButton>
+            </CustomItems>
 		</ActionBar>
 	</px:PXGrid>
 </asp:Content>

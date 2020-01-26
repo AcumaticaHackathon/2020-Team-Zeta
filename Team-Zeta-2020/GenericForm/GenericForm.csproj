@@ -58,9 +58,11 @@
   <ItemGroup>
     <Compile Include="Attributes\DataTypesAttribute.cs" />
     <Compile Include="Attributes\ControlTypesAttribute.cs" />
+    <Compile Include="DAC\CSMyAnswers.cs" />
     <Compile Include="DAC\CSUserDefDataDetail.cs" />
     <Compile Include="DAC\CSUserDefDataHeader.cs" />
     <Compile Include="GFFormBuilder.cs" />
+    <Compile Include="GFFormSaver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

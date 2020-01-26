@@ -1,0 +1,15 @@
+﻿<Sql TableName="CSMyAnswers" TableSchemaXml="#CDATA">
+    <CDATA name="TableSchemaXml"><![CDATA[<table name="CSMyAnswers">
+  <col name="CompanyID" type="Int" default="Zero" />
+  <col name="UserDefDataID" type="Int" />
+  <col name="UserDefDataLineID" type="Int" />
+  <col name="UserResponseID" type="Int" />
+  <col name="Value" type="NVarChar(255)" nullable="true" />
+  <index name="CSMyAnswers_PK" clustered="true" primary="true" unique="true">
+    <col name="CompanyID" />
+    <col name="UserDefDataID" />
+    <col name="UserDefDataLineID" />
+    <col name="UserResponseID" />
+  </index>
+</table>]]></CDATA>
+</Sql>
