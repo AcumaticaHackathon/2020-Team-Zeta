@@ -1,8 +1,8 @@
 ﻿using System;
-using GenericForm;
+using GF.Attributes;
 using PX.Data;
 
-namespace GenericFormTZ
+namespace GF.DAC
 {
     [Serializable]
     [PXCacheName("CSUserDefDataDetail")]

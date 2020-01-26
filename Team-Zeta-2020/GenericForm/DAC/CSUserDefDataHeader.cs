@@ -1,7 +1,7 @@
 ﻿using System;
 using PX.Data;
 
-namespace GenericFormTZ
+namespace GF.DAC
 {
   [Serializable]
   [PXCacheName("CSUserDefDataHeader")]

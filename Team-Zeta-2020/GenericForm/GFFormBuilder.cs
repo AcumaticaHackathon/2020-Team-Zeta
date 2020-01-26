@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GenericFormTZ;
+using GF.DAC;
 using PX.Data;
 
-namespace GenericForm
+namespace GF
 {
     public class GFFormBuilder : PXGraph<GFFormBuilder, CSUserDefDataHeader>
     {

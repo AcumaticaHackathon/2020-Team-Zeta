@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PX.Data;
 
-namespace GenericForm
+namespace GF.Attributes
 {
     public class DataTypesAttribute : PXStringListAttribute
     {

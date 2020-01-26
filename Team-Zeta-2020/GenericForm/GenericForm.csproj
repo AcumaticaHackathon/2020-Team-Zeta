@@ -55,10 +55,11 @@
   <ItemGroup>
     <Compile Include="DataTypesAttribute.cs" />
     <Compile Include="ControlTypesAttribute.cs" />
-    <Compile Include="CSUserDefDataDetail.cs" />
-    <Compile Include="CSUserDefDataHeader.cs" />
+    <Compile Include="DAC\CSUserDefDataDetail.cs" />
+    <Compile Include="DAC\CSUserDefDataHeader.cs" />
     <Compile Include="GFFormBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
