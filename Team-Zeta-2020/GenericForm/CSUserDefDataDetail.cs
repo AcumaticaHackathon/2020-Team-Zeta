@@ -4,27 +4,48 @@ using PX.Data;
 namespace GenericFormTZ
 {
   [Serializable]
-  [PXCacheName("CSUserDefDataHeader")]
-  public class CSUserDefDataHeader : IBqlTable
+  [PXCacheName("CSUserDefDataDetail")]
+  public class CSUserDefDataDetail : IBqlTable
   {
     #region UserDefDataID
-    [PXDBIdentity(IsKey = true)]
+    [PXDBInt(IsKey = true)]
+    [PXUIField(DisplayName = "User Def Data ID")]
     public virtual int? UserDefDataID { get; set; }
     public abstract class userDefDataID : PX.Data.BQL.BqlInt.Field<userDefDataID> { }
     #endregion
 
-    #region UserDefDataCD
-    [PXDBString(30, IsUnicode = true, InputMask = "")]
-    [PXUIField(DisplayName = "User Def Data CD")]
-    public virtual string UserDefDataCD { get; set; }
-    public abstract class userDefDataCD : PX.Data.BQL.BqlString.Field<userDefDataCD> { }
+    #region UserDefDataLineID
+    [PXDBIdentity(IsKey = true)]
+    public virtual int? UserDefDataLineID { get; set; }
+    public abstract class userDefDataLineID : PX.Data.BQL.BqlInt.Field<userDefDataLineID> { }
     #endregion
 
-    #region Description
-    [PXDBString(80, IsUnicode = true, InputMask = "")]
-    [PXUIField(DisplayName = "Description")]
-    public virtual string Description { get; set; }
-    public abstract class description : PX.Data.BQL.BqlString.Field<description> { }
+    #region DataElementName
+    [PXDBString(30, IsUnicode = true, InputMask = "")]
+    [PXUIField(DisplayName = "Data Element Name")]
+    public virtual string DataElementName { get; set; }
+    public abstract class dataElementName : PX.Data.BQL.BqlString.Field<dataElementName> { }
+    #endregion
+
+    #region DataElementType
+    [PXDBString(20, IsUnicode = true, InputMask = "")]
+    [PXUIField(DisplayName = "Data Element Type")]
+    public virtual string DataElementType { get; set; }
+    public abstract class dataElementType : PX.Data.BQL.BqlString.Field<dataElementType> { }
+    #endregion
+
+    #region ControlType
+    [PXDBString(20, IsUnicode = true, InputMask = "")]
+    [PXUIField(DisplayName = "Control Type")]
+    public virtual string ControlType { get; set; }
+    public abstract class controlType : PX.Data.BQL.BqlString.Field<controlType> { }
+    #endregion
+
+    #region SequenceNo
+    [PXDBInt()]
+    [PXUIField(DisplayName = "Sequence No")]
+    public virtual int? SequenceNo { get; set; }
+    public abstract class sequenceNo : PX.Data.BQL.BqlInt.Field<sequenceNo> { }
     #endregion
 
     #region Tstamp
