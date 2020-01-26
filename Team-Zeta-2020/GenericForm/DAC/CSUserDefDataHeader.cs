@@ -8,15 +8,16 @@ namespace GF.DAC
   public class CSUserDefDataHeader : IBqlTable
   {
       #region UserDefDataID
-      [PXSelector(typeof(Search<userDefDataID>),
-          typeof(userDefDataCD),
-          typeof(description), SubstituteKey = typeof(userDefDataCD))]
+
     [PXDBIdentity(IsKey = true)]
     public virtual int? UserDefDataID { get; set; }
     public abstract class userDefDataID : PX.Data.BQL.BqlInt.Field<userDefDataID> { }
     #endregion
 
     #region UserDefDataCD
+    //[PXSelector(typeof(Search<userDefDataCD>),
+    //    typeof(userDefDataCD),
+    //    typeof(description))]
     [PXDBString(30, IsUnicode = true, InputMask = "")]
     [PXUIField(DisplayName = "Screen ID")]
     public virtual string UserDefDataCD { get; set; }
@@ -31,7 +32,7 @@ namespace GF.DAC
     #endregion
 
     #region SiteMapID
-    [PXDBString(8, IsUnicode = true, InputMask = "")]
+    [PXDBString(8, IsUnicode = true, InputMask = "AA.00.00.00")]
     [PXUIField(DisplayName = "Site Map ID")]
     public virtual string SiteMapID { get; set; }
     public abstract class siteMapID : PX.Data.BQL.BqlString.Field<siteMapID> { }

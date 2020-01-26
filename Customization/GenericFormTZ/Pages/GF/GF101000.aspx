@@ -14,8 +14,9 @@
 	<px:PXFormView ID="form" runat="server" DataSourceID="ds" DataMember="Header" Width="100%" Height="100px" AllowAutoHide="false">
 		<Template>
 			<px:PXLayoutRule ID="PXLayoutRule1" runat="server" StartRow="True"/>
-            <px:PXSelector ID="selDataTypeID" runat="server" DataField="UserDefDataCD" CommitChanges="True"/>
+            <px:PXTextEdit ID="selDataTypeID" runat="server" DataField="UserDefDataCD" CommitChanges="True"/>
             <px:PXTextEdit ID="txtHeaderDesc" DataField="Description" runat="server"  />
+            <px:PXTextEdit ID="txtSiteMapID" DataField="SiteMapID" runat="server"  />
 		</Template>
 	</px:PXFormView>
 </asp:Content>
