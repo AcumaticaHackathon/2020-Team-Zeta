@@ -26,11 +26,11 @@ namespace GenericFormTZ
     #endregion
     
           #region DataElementName
-        [PXDBString(30, IsUnicode = true, InputMask = "")]
-        [PXUIField(DisplayName = "Data Element Name")]
-        public virtual string DataElementName { get; set; }
-        public abstract class dataElementName : PX.Data.BQL.BqlString.Field<dataElementName> { }
-        #endregion
+            [PXDBString(30, IsUnicode = true, InputMask = "")]
+            [PXUIField(DisplayName = "Data Element Name")]
+            public virtual string DataElementName { get; set; }
+            public abstract class dataElementName : PX.Data.BQL.BqlString.Field<dataElementName> { }
+            #endregion
     
           #region DataElementType
         
