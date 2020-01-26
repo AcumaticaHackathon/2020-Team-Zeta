@@ -7,7 +7,7 @@
     <ProjectGuid>{F801A881-8491-487C-8964-F2D26D1D4872}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GenericForm</RootNamespace>
+    <RootNamespace>GF</RootNamespace>
     <AssemblyName>GenericForm</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
