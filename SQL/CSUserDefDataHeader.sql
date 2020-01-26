@@ -12,7 +12,7 @@ CREATE TABLE [dbo].[CSUserDefDataHeader](
 	[CompanyID]              [int]              NOT NULL,
 	[UserDefDataID]          [int]              NOT NULL   IDENTITY,
 	[UserDefDataCD]          [nvarchar](30)     NOT NULL,
-	[PrevLineNumber]		     [int]              NOT NULL,
+	[PrevLineNbr]		     [int]              NOT NULL,
 	[Description]            [nvarchar](80)     NOT NULL,
 	[tstamp]                 [timestamp]        NOT NULL,
 	[CreatedByID]            [uniqueidentifier] NOT NULL,
@@ -34,8 +34,6 @@ GO
 GRANT INSERT, UPDATE, SELECT, DELETE ON CSUserDefDataHeader to PUBLIC
 GO
 ​
--- ---------------------------------------------------------------------------------------------------------------------
-DROP TABLE CSUserDefDataDetail
 ​
 ​
 

@@ -7,6 +7,7 @@ namespace GenericFormTZ
   [PXCacheName("CSUserDefDataHeader")]
   public class CSUserDefDataHeader : IBqlTable
   {
+      PXGenericInqGrph
     #region UserDefDataID
     [PXDBIdentity(IsKey = true)]
     public virtual int? UserDefDataID { get; set; }
