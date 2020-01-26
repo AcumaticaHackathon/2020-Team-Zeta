@@ -25,7 +25,7 @@
 			<px:PXGridLevel DataMember="Details">
 			    <Columns>
                     <px:PXGridColumn DataField="DataElementName" />
-                    <px:PXGridColumn DataField="DataElementType" />
+                    <px:PXGridColumn DataField="DataElementType" Type="DropDownList" />
                     <px:PXGridColumn DataField="ControlType" Type="DropDownList" />
 			    </Columns>
 			</px:PXGridLevel>
