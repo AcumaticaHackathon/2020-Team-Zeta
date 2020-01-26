@@ -30,6 +30,13 @@ namespace GenericFormTZ
     public abstract class description : PX.Data.BQL.BqlString.Field<description> { }
     #endregion
 
+    #region SiteMapID
+    [PXDBString(8, IsUnicode = true, InputMask = "")]
+    [PXUIField(DisplayName = "Site Map ID")]
+    public virtual string SiteMapID { get; set; }
+    public abstract class siteMapID : PX.Data.BQL.BqlString.Field<siteMapID> { }
+    #endregion
+
     #region PrevLineNbr
     [PXDBInt()]
     [PXDefault(0, PersistingCheck = PXPersistingCheck.Nothing)]

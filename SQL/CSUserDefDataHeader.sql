@@ -14,6 +14,7 @@ CREATE TABLE [dbo].[CSUserDefDataHeader](
 	[UserDefDataCD]          [nvarchar](30)     NOT NULL,
 	[PrevLineNbr]		     [int]              NOT NULL,
 	[Description]            [nvarchar](80)     NOT NULL,
+	[SiteMapID]				 [nvarchar](8)      NOT NULL,
 	[tstamp]                 [timestamp]        NOT NULL,
 	[CreatedByID]            [uniqueidentifier] NOT NULL,
 	[CreatedByScreenID]      [char](8)          NOT NULL,
